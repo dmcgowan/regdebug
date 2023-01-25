@@ -29,6 +29,7 @@ COPY --from=certbuilder /root /root
 
 RUN trust anchor --store /root/.mitmproxy/mitmproxy-ca.crt
 
+ENV HOME=/root
 ENV CONTAINERD_CREDENTIAL_DIRECTORY=/root/.local/share/lctr/creds
 ENV HTTPS_PROXY=localhost:8888
 
